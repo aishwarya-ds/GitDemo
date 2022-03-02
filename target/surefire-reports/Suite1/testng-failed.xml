@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Suite1]">
+  <listeners>
+    <listener class-name="com.qa.utility.EntentReportsDemo"/>
+  </listeners>
+  <test thread-count="5" verbose="0" name="Nopackage(failed)">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="url" value="https://www.amazon.in/"/>
+    <classes>
+      <class name="TC.TC_homepage">
+        <methods>
+          <include name="findTheElement" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- TC.TC_homepage -->
+    </classes>
+  </test> <!-- Nopackage(failed) -->
+</suite> <!-- Failed suite [Suite1] -->
