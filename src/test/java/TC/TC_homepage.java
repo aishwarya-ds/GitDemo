@@ -12,25 +12,27 @@ import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
 public class TC_homepage {
-	public static Logger log= LogManager.getLogManager().getLogger(Baseclass.class.getName());
-	
+
+	//	public static final Logger log= LogManager.getLogManager().getLogger(Baseclass.class.getName());
+	public static Logger log = Logger.getLogger(TC_homepage.class.getName());
+
 	WebDriver driver;
-	
+
 	@Test
 	@Parameters({"browser","url"})
 
 	public void findTheElement(String browser,String url)
-	
+
 	{
 		System.setProperty("webdriver.chrome.driver", "D://work-spaces/java/CJ/Java/src/main/java/Drivers/chromedriver.exe");
 
-		//log.info("system property is done");
+		log.info("system property is done and webdriver is initialised");
 		driver=Baseclass.Utils(browser,url);
-		
+
 		PO_Click p=new PO_Click(driver);
 		p.allButtonMethod().click();
 
-		//log.info("all button is clicked");
+		log.info("all button is clicked");
 		// p.besesellermethod().click();
 
 	}
